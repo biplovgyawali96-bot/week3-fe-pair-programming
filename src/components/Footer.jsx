@@ -1,11 +1,14 @@
+import PageLinks from './PageLinks'
+
 function Footer() {
   return (
-    <div>
-      <p className="section-dummy">Footer</p>
-      <p className="section-dummy">...</p>
-    </div>
-  );
+    <footer className='section footer'>
+      <PageLinks
+        parentClass='footer-links'
+        itemClass='footer-link'
+      />
+    </footer>
+  )
 }
 
-export default Footer;
- 
+export default Footer

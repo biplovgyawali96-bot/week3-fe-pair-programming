@@ -1,11 +1,19 @@
-function Tours() {
+import { tours } from '../data'
+import Title from './Title'
+import Tour from './Tour'
+
+const Tours = () => {
   return (
-    <div>
-      <p className="section-dummy">Tours</p>
-      <p className="section-dummy">...</p>
-    </div>
-  );
+    <section className='section' id='tours'>
+      <Title title='featured' subTitle='tours' />
+
+      <div className='section-center featured-center'>
+        {tours.map((tour) => {
+          return <Tour key={tour.id} {...tour} />
+        })}
+      </div>
+    </section>
+  )
 }
 
-export default Tours;
- 
+export default Tours
